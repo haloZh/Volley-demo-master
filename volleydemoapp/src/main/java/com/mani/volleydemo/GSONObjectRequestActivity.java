@@ -64,6 +64,11 @@ import com.mani.volleydemo.model.FlickrResponse;
 import com.mani.volleydemo.model.FlickrResponsePhotos;
 import com.mani.volleydemo.toolbox.GsonRequest;
 import com.mani.volleydemo.util.BitmapUtil;
+import com.ronguan.R;
+import com.ronguan.bean.UserBean;
+import com.ronguan.utils.DialogUtil;
+import com.ronguan.utils.Httputil;
+import com.ronguan.utils.Netutil;
 
 /**
  * Demonstrates how to execute Gson Request using Volley library.
@@ -73,13 +78,13 @@ import com.mani.volleydemo.util.BitmapUtil;
 
 public class GSONObjectRequestActivity extends Activity {
 
+    private Context context;
 	private Button mTrigger;
 	private RequestQueue mVolleyQueue;
 	private ListView mListView;
 	private EfficientAdapter mAdapter;
 	private ProgressDialog mProgress;
 	private List<DataModel> mDataList;
-	
 	private ImageLoader mImageLoader;
 	
 	private final String TAG_REQUEST = "MY_TAG";
@@ -87,7 +92,6 @@ public class GSONObjectRequestActivity extends Activity {
 	private class DataModel {
 		private String mImageUrl;
 		private String mTitle;
-		
 		public String getImageUrl() {
 			return mImageUrl;
 		}
@@ -139,7 +143,8 @@ public class GSONObjectRequestActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.json_object_layout);
-		
+
+        context=this;
 		actionBarSetup();
 
 		// Initialise Volley Request Queue. 
@@ -160,8 +165,50 @@ public class GSONObjectRequestActivity extends Activity {
 		mTrigger.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				showProgress();
-				makeSampleHttpRequest();
+
+                if(!Httputil.checkNet(context))
+                    return;
+
+                showProgress();
+                RequestQueue mVolleyQueue=Volley.newRequestQueue(context);
+                String url = "http://app.100xuexi.com/EBook/EBookUserHandle.ashx";
+                Uri.Builder builder = Uri.parse(url).buildUpon();
+
+                builder.appendQueryParameter("method", "Login");
+                builder.appendQueryParameter("username", "18510327828");
+                builder.appendQueryParameter("password", "18570327828");
+                Log.d("GSONObject",builder.toString());
+
+                GsonRequest<UserBean> gsonObjRequest = new GsonRequest<>(Request.Method.GET,builder.toString(),
+                        UserBean.class,
+                        null,
+                        new Response.Listener<UserBean>() {
+                    @Override
+                    public void onResponse(UserBean userBean) {
+                            DialogUtil.showToast(GSONObjectRequestActivity.this,userBean.getQuery().getRun_number().toString());
+                            stopProgress();
+                    }
+                },new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        if( volleyError instanceof NetworkError) {
+                        } else if( volleyError instanceof ClientError) {
+                        } else if( volleyError instanceof ServerError) {
+                        } else if( volleyError instanceof AuthFailureError) {
+                        } else if( volleyError instanceof ParseError) {
+                        } else if( volleyError instanceof NoConnectionError) {
+                        } else if( volleyError instanceof TimeoutError) {
+                        }
+                        stopProgress();
+                        DialogUtil.showToast(GSONObjectRequestActivity.this, getString(R.string.no_net));
+                    }
+                });
+                gsonObjRequest.setTag(TAG_REQUEST);
+                mVolleyQueue.add(gsonObjRequest);
+
+
+
+
 			}
 		});
 	}
@@ -180,57 +227,7 @@ public class GSONObjectRequestActivity extends Activity {
 			mProgress.dismiss();
 	}
 	  
-	private void makeSampleHttpRequest() {
-		
-		String url = "http://api.openweathermap.org/data/2.5/weather";
-		Uri.Builder builder = Uri.parse(url).buildUpon();
-		builder.appendQueryParameter("q", "beijing");
-//		builder.appendQueryParameter("method", "flickr.interestingness.getList");
-//		builder.appendQueryParameter("format", "json");
-//		builder.appendQueryParameter("nojsoncallback", "1");
 
-
-		gsonObjRequest = new GsonRequest<FlickrResponsePhotos>(Request.Method.GET, builder.toString(),
-				FlickrResponsePhotos.class, null, new Response.Listener<FlickrResponsePhotos>() {
-			@Override
-			public void onResponse(FlickrResponsePhotos response) {
-				try {
-
-//                    parseFlickrImageResponse(response);
-//					mAdapter.notifyDataSetChanged();
-				} catch (Exception e) {
-					e.printStackTrace();
-					showToast("JSON parse error");
-				}
-				stopProgress();
-			}
-		}, new Response.ErrorListener() {
-
-			@Override
-			public void onErrorResponse(VolleyError error) {
-				// Handle your error types accordingly.For Timeout & No connection error, you can show 'retry' button.
-				// For AuthFailure, you can re login with user credentials.
-				// For ClientError, 400 & 401, Errors happening on client side when sending api request.
-				// In this case you can check how client is forming the api and debug accordingly.
-				// For ServerError 5xx, you can do retry or handle accordingly.
-				if( error instanceof NetworkError) {
-				} else if( error instanceof ClientError) { 
-				} else if( error instanceof ServerError) {
-				} else if( error instanceof AuthFailureError) {
-				} else if( error instanceof ParseError) {
-				} else if( error instanceof NoConnectionError) {
-				} else if( error instanceof TimeoutError) {
-				}
-
-				stopProgress();
-				showToast(error.getMessage());
-			}
-		});
-		gsonObjRequest.setTag(TAG_REQUEST);	
-		mVolleyQueue.add(gsonObjRequest);
-	}
-	
-	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);

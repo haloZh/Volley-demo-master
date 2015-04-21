@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.TextView.BufferType;
 
+import com.ronguan.R;
+
 public class MainActivity extends Activity {
 
 	private Button mJsonRequest;

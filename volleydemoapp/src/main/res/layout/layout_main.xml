@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical" >
+
+<RelativeLayout
+    android:id="@+id/main_tabs"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:id="@+id/main_llayout_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/main_img_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/main_tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_llayout_interaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/main_img_interaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    />
+                <FrameLayout
+                    android:id="@+id/fl_interaction_point"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:visibility="invisible" >
+                    <ImageView
+                        android:id="@+id/interaction_point"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        />
+                    <TextView
+                        android:id="@+id/tv_interaction_point"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="11"
+                        android:textSize="10sp"
+                        android:gravity="center"/>
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/main_tv_my_interaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="附近学友"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/main_llayout_ebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/main_img_ebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    />
+
+                <ImageView
+                    android:id="@+id/ebook_point"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_toEndOf="@+id/main_img_ebook"
+                    android:layout_toRightOf="@+id/main_img_ebook"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/main_tv_my_ebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的e书"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_llayout_tk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/main_img_tk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    />
+
+                <ImageView
+                    android:id="@+id/tk_point"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toEndOf="@+id/main_img_tk"
+                    android:layout_toRightOf="@+id/main_img_tk"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/main_tv_my_tk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的题库"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_llayout_sc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/main_img_sc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    />
+
+                <ImageView
+                    android:id="@+id/sc_point"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_toEndOf="@+id/main_img_sc"
+                    android:layout_toRightOf="@+id/main_img_sc"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/main_tv_my_sc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的账户"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+<com.ronguan.view.JazzyViewPager
+    android:id="@+id/main_viewpager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/main_tabs" >
+</com.ronguan.view.JazzyViewPager>
+
+<FrameLayout
+    android:id="@+id/realtabcontent"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_centerHorizontal="true"
+    android:layout_weight="1" />
+
+<FrameLayout
+    android:id="@+id/category_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    ></FrameLayout>
+
+</RelativeLayout>

@@ -2,27 +2,6 @@
 <items version="2" >
 
     <item
-        jar="E:\sdk-android\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="E:\Volley-demo-master\volleydemoapp\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-4da158877fa753ff35f92a7f013089d88f2f5ce5.jar" />
-    </item>
-    <item
-        jar="E:\Volley-demo-master\volleydemoapp\build\intermediates\exploded-aar\se.emilsjolander\stickylistheaders\2.6.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="dd93a96342fce030e55cafc5917d768da0135164">
-        <dex dex="E:\Volley-demo-master\volleydemoapp\build\intermediates\pre-dexed\debug\classes-d8fa3b3a8bf2f63250cc55e12c13fec46c9c6497.jar" />
-    </item>
-    <item
-        jar="E:\Volley-demo-master\volleydemoapp\build\intermediates\exploded-aar\com.google.android.gms\play-services\4.4.52\classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="3dfdf1db5ce5ea2999a5dcde8c8e650b02660059">
-        <dex dex="E:\Volley-demo-master\volleydemoapp\build\intermediates\pre-dexed\debug\classes-85fe9a5cc77811155fbd302ed3fe844b5f860fee.jar" />
-    </item>
-    <item
         jar="C:\Users\haloZh\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
         jumboMode="false"
         revision="21.1.1"
@@ -37,11 +16,46 @@
         <dex dex="E:\Volley-demo-master\volleydemoapp\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-c33dcc604a722ae330ba3000c0a6818db762ef29.jar" />
     </item>
     <item
+        jar="E:\sdk-android\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="E:\Volley-demo-master\volleydemoapp\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-4da158877fa753ff35f92a7f013089d88f2f5ce5.jar" />
+    </item>
+    <item
         jar="E:\Volley-demo-master\volleydemoapp\libs\httpmime-4.2.5.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="6efc2f9df23c2ac4d3b701a11cab9f9fa6a641d4">
         <dex dex="E:\Volley-demo-master\volleydemoapp\build\intermediates\pre-dexed\debug\httpmime-4.2.5-e38c6e007a1c4c010926c78aa4d4b0c44903106a.jar" />
+    </item>
+    <item
+        jar="E:\Volley-demo-master\volleydemoapp\build\intermediates\exploded-aar\se.emilsjolander\stickylistheaders\2.6.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="dd93a96342fce030e55cafc5917d768da0135164">
+        <dex dex="E:\Volley-demo-master\volleydemoapp\build\intermediates\pre-dexed\debug\classes-d8fa3b3a8bf2f63250cc55e12c13fec46c9c6497.jar" />
+    </item>
+    <item
+        jar="E:\Volley-demo-master\volleydemoapp\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="5896b0a4e377ac4242eb2bc785220c1c4fc052f4">
+        <dex dex="E:\Volley-demo-master\volleydemoapp\build\intermediates\pre-dexed\debug\android-support-v4-17f1b81c3b6cba4452f9b0831314b92de393f279.jar" />
+    </item>
+    <item
+        jar="E:\Volley-demo-master\volleydemoapp\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="E:\Volley-demo-master\volleydemoapp\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-c64fb9cb5e42dff250b6c4b1c58e370bf058bc97.jar" />
+    </item>
+    <item
+        jar="E:\Volley-demo-master\volleydemoapp\build\intermediates\exploded-aar\com.google.android.gms\play-services\4.4.52\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="3dfdf1db5ce5ea2999a5dcde8c8e650b02660059">
+        <dex dex="E:\Volley-demo-master\volleydemoapp\build\intermediates\pre-dexed\debug\classes-85fe9a5cc77811155fbd302ed3fe844b5f860fee.jar" />
     </item>
     <item
         jar="E:\Volley-demo-master\volleydemoapp\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"

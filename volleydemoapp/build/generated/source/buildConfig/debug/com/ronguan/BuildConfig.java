@@ -1,7 +1,7 @@
 /**
  * Automatically generated file. DO NOT MODIFY
  */
-package com.mani.volleydemo;
+package com.ronguan;
 
 public final class BuildConfig {
   public static final boolean DEBUG = Boolean.parseBoolean("true");

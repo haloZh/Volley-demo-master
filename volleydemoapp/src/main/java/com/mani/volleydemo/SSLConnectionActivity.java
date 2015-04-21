@@ -35,6 +35,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.mani.volleydemo.ssl.SslHttpStack;
+import com.ronguan.R;
 
 /**
  * Demonstrates how to execute Https (SSL) Connectivity Request using Volley library.

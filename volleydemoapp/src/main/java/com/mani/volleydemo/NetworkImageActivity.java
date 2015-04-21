@@ -59,6 +59,7 @@ import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
 import com.mani.volleydemo.toolbox.FadeInImageListener;
 import com.mani.volleydemo.util.BitmapUtil;
+import com.ronguan.R;
 
 
 /**

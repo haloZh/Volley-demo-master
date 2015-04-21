@@ -38,8 +38,8 @@ import org.apache.http.conn.scheme.LayeredSocketFactory;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 
-import com.mani.volleydemo.R;
 import com.mani.volleydemo.app.VolleySampleApplication;
+import com.ronguan.R;
 
 /**
  *

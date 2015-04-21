@@ -25,7 +25,7 @@ import android.widget.ImageView;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.ImageLoader.ImageContainer;
-import com.mani.volleydemo.R;
+import com.ronguan.R;
 
 /**
  * Implements ImageListener interface to perform fade-In animation of image when download completes.

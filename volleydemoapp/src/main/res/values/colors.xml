@@ -20,6 +20,7 @@
     <color name="text_tab_selected">#eeeeee</color>
     <color name="text_tab_normal">#b9b9b9</color>
     <color name="text_tab_shadow">#67587686</color>
+    <color name="holo_blue">#FF33E5B5</color>
     
 	<!-- Venue list divider -->
 	<color name="venue_list_divider">#e0e0e0</color>

@@ -57,6 +57,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.mani.volleydemo.toolbox.FadeInImageListener;
 import com.mani.volleydemo.util.BitmapUtil;
+import com.ronguan.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
